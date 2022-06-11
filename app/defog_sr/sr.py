@@ -1,3 +1,5 @@
+import os.path
+
 from PIL import Image
 from PIL.Image import Resampling
 
@@ -11,7 +13,7 @@ import numpy as np
 
 
 class SuperResolution:
-    def __init__(self, checkpoint_filepath='defog_sr/checkpoint/checkpoint'):
+    def __init__(self, checkpoint_filepath=os.path.join(os.getcwd(), 'checkpoint/checkpoint')):
         self.checkpoint_filepath = checkpoint_filepath
         self.model = None
         self.load_super_resolution_model()
