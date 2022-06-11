@@ -11,7 +11,7 @@ import numpy as np
 
 
 class SuperResolution:
-    def __init__(self, checkpoint_filepath='checkpoint/checkpoint'):
+    def __init__(self, checkpoint_filepath='defog_sr/checkpoint/checkpoint'):
         self.checkpoint_filepath = checkpoint_filepath
         self.model = None
         self.load_super_resolution_model()
