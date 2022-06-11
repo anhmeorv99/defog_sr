@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 from starlette import status
 
-from app.app import defog, SuperResolution
+from defog_sr import defog, SuperResolution
 from fastapi.responses import StreamingResponse, JSONResponse
 import uvicorn
 from fastapi import FastAPI, File, UploadFile, Form
