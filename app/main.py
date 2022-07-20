@@ -52,12 +52,6 @@ async def upload(
     except Exception as e:
         print(e)
         return JSONResponse(status_code=status.HTTP_400_BAD_REQUEST, content={"mgs": e})
-    finally:
-        await file.close()
-        return JSONResponse(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            content={"mgs": "Some thing went wrong"}
-        )
 
 
 if __name__ == "__main__":

@@ -11,9 +11,15 @@ import tensorflow as tf
 import cv2
 import numpy as np
 
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+if len(physical_devices) > 0:
+    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+else:
+    print('Not enough GPU hardware devices available, Run CPU mode')
+
 
 class SuperResolution:
-    def __init__(self, checkpoint_filepath=os.path.join(os.getcwd(), 'app/defog_sr/checkpoint/checkpoint')):
+    def __init__(self, checkpoint_filepath=os.path.join(os.getcwd(), 'defog_sr\\checkpoint\\checkpoint')):
         self.checkpoint_filepath = checkpoint_filepath
         self.model = None
         self.load_super_resolution_model()

@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/benchmark/Inception-Score" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/benchmark/Non-Local-Dehazing-Python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/benchmark/dehazing_using_color_lines" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/benchmark/matlab2python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/benchmark/smop" vcs="Git" />
   </component>
 </project>
