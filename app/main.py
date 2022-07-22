@@ -39,7 +39,7 @@ async def upload(
 
             image = sr.upscale_image(image)
         if must_defog:
-            image = defog(image, 5)
+            image = defog(image, 3)
         if denoise:
             image = cv2.fastNlMeansDenoisingColored(image, None, 3, 10, 7, 21)
 

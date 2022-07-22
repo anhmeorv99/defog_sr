@@ -56,6 +56,8 @@ def defog(img, percent=5, adjust_gamma=False, denoise=False):
     out_img = cv2.merge(out_channels)
     if adjust_gamma:
         out_img = adjust_image_gamma(out_img)
+
+    out_img = zmIceColor(out_img / 255.0) * 255
     if denoise:
         out_img = cv2.fastNlMeansDenoisingColored(out_img, None, 3, 10, 7, 21)
 
